@@ -28,7 +28,7 @@ export class Provider extends Component<Props, any> {
     this.store = props.store;
   }
 
-  public getChildContext() {
+  public getChildContext(): any {
     return { store: this.store, storeSubscription: null };
   }
 

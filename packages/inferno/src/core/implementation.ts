@@ -81,6 +81,18 @@ function getVNode(childFlags: ChildFlags, children, className: string | null | u
   };
 }
 
+/**
+ * JSDoc required for Google Closure Compiler to not produce warnings.
+ *
+ * @param {number} flags
+ * @param {*} type
+ * @param {(string | null)=} className
+ * @param {*=} children
+ * @param {number=} childFlags
+ * @param {(Object | null)=} props
+ * @param {(string | number | null)=} key
+ * @param {*=} ref
+ */
 export function createVNode<P>(
   flags: VNodeFlags,
   type,
@@ -168,6 +180,12 @@ export function createComponentVNode<P>(flags: VNodeFlags, type, props?: Props<P
   return vNode;
 }
 
+/**
+ * JSDoc required for Google Closure Compiler to not produce warnings.
+ *
+ * @param {(string | number)=} text
+ * @param {(string | number | null)=} key
+ */
 export function createTextVNode(text?: string | number, key?: string | number | null): VNode {
   return getVNode(ChildFlags.HasInvalidChildren, isNullOrUndef(text) ? '' : text, null, VNodeFlags.Text, key, null, null, null);
 }

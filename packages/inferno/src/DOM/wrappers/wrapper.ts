@@ -19,6 +19,12 @@ function triggerEventListener(props, methodName, e) {
   }
 }
 
+/**
+ * JSDoc required for Google Closure Compiler to not produce warnings.
+ *
+ * @param {(string | Array<string>)=} methodName
+ * @param {Function=} applyValue
+ */
 export function createWrappedFunction(methodName: string | string[], applyValue?: Function): Function {
   const fnMethod = function(e) {
     e.stopPropagation();
